@@ -20,12 +20,22 @@ require_once("config.php");
 
 
 //Carrega um usuário usando o login e a senha 
+// $usuario = new Usuario();
+// $usuario->login("junior", "123456");
+// echo $usuario;
+
+/*
+//Criando um novo usuário
+$aluno = new Usuario("aluno", "@lun0");
+$aluno->insert();
+echo $aluno;
+*/
+
+
 $usuario = new Usuario();
-$usuario->login("junior", "123456");
+$usuario->loadById(8);
+$usuario->update("professor", "!@#$%¨&*");
 echo $usuario;
-
-
-
 // $sql = new Sql();
 // $usuarios = $sql->select("SELECT * FROM tb_usuarios");
 // echo json_encode($usuarios);
